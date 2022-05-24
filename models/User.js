@@ -6,7 +6,7 @@ class User extends Model {}
 User.init(
   {
     id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
@@ -18,9 +18,9 @@ User.init(
   },
   {
     sequelize,
-    timestamps: true,
-    freezeTableName: true,
-    underscored: true,
+    // timestamps: true,
+    // freezeTableName: true,
+    // underscored: true,
     modelName: "User",
   }
 );

@@ -20,13 +20,13 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/new", withAuth, (req, res) => {
+router.get("/new", (req, res) => {
   res.render("new-post", {
     layout: "dashboard",
   });
 });
 
-router.get("/edit/:id", withAuth, async (req, res) => {
+router.get("/edit/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
 
